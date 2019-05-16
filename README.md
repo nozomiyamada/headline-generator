@@ -1,6 +1,6 @@
 # Headline Generator
 
-generate "headline" (ประมาณ 20-4 คำ) จาก description ของข่าว โดยใช้ seq2seq
+generate "headline" (ประมาณ 20-40 คำ) จาก description ของข่าว โดยใช้ seq2seq
 
 ## Introduction
 seq2seq เป็นวิธีหนึ่งที่เปลี่ยน time series data เป็น time series data อีกอย่างหนึ่ง
@@ -14,7 +14,13 @@ seq2seq เป็นวิธีหนึ่งที่เปลี่ยน ti
 โครงการนี้เป็น Text Summarization ชนิดหนึ่ง
 
 ## Method
-ข้อมูล : ข่าวไทยรัฐ 8 ปีที่ผ่านมา ทั้งหมด 5 แสนกว่าบทความ
+ข้อมูล : ข่าวไทยรัฐ 8 ปีที่ผ่านมา ทั้งหมด 448299 บทความ ข่าวที่ scrape มามีสามส่วน: headline(~ 50คำ), description(~ 250คำ) และ เนื้อหา
+
+ทีนี้ ใช้แค่ headline และ description เท่านั้น
+
+ขนาดไฟล์
+- headine: 72.7MB
+- description: 237.9MB
 
 โมเดลที่จะใช้ : single layer LSTM, multi layer BiLSTM, Attension
 
