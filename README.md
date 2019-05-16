@@ -22,10 +22,12 @@ seq2seq เป็นวิธีหนึ่งที่เปลี่ยน ti
 ทีนี้ ใช้แค่ headline และ description เท่านั้น
 
 ขนาดไฟล์
-- headine: 72.7MB
-- description: 237.9MB
+- headine: 69MB
+- description: 227MB
 
 โมเดลที่จะใช้ : single layer LSTM, multi layer BiLSTM with attention
+
+total vocaburary : 57908 คำ (เอาแค่คำที่ปรากฏ 3 ครั้งขึ้นไปเท่านั้น)
 
 ### Model 1: Single Layer LSTM
 model for training
