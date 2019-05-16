@@ -29,6 +29,10 @@ seq2seq เป็นวิธีหนึ่งที่เปลี่ยน ti
 
 total vocaburary : 57908 คำ (เอาแค่คำที่ปรากฏ 3 ครั้งขึ้นไปเท่านั้น)
 
+train ใช้เวลานานมากเกือบเป็นวัน Google Colab จะปิด runtime โดยอัตโนมัติหลัง 90 นาที เพราะฉะนั้น ใช้ auto refresh ทุก 60 นาที
+
+https://chrome.google.com/webstore/detail/auto-refresh/ifooldnmmcmlbdennkpdnlnbgbmfalko
+
 ### Model 1: Single Layer LSTM
 model for training
 ![mono2](https://user-images.githubusercontent.com/44984892/57869145-9aa76080-782e-11e9-8a93-39922bd04d26.png)
