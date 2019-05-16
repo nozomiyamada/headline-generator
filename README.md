@@ -27,7 +27,7 @@ seq2seq เป็นวิธีหนึ่งที่เปลี่ยน ti
 
 โมเดลที่จะใช้ : single layer LSTM, multi layer BiLSTM with attention
 
-### Model 1: single layer LSTM
+### Model 1: Single Layer LSTM
 model for training
 ![mono2](https://user-images.githubusercontent.com/44984892/57869145-9aa76080-782e-11e9-8a93-39922bd04d26.png)
 
@@ -35,5 +35,14 @@ model for generating
 ![mono1](https://user-images.githubusercontent.com/44984892/57869139-9713d980-782e-11e9-91e7-1e8b4ca6fc8b.png)
 
 ## Result
+### Model 1: Single Layer LSTM with Greedy Algorithm
+
+| input (description) | answer (headline) | output (headline) |
+|:-:|:-:|:-:|
+| ปิดประชุมเครือจักรภพอังกฤษ เน้นการปฏิรูป แต่ยังหาฉันทามติเรื่องสิทธิมนุษยชนได้ | ปิดประชุมเครือจักรภพ ยังขัดเรื่องสิทธิมนุษยชน |อาเล็ก' ยัน 'อาเล็ก' ยัน 'อาเล็ก' ไม่ซีเรียส 'อั้ม'|
+|รมว.วัฒนธรรมตรวจสอบ โบราณสถานเขาขุนพนมเมืองคอน หลังมีสิ่งก่อสร้างใหม่เพิ่มขึ้นเรื่อยๆโดยไม่ขออนุญาต สั่งยุติการก่อสร้างตกแต่งที่อาจทำให้เอกลักษณ์และประวัติความเป็นมาแต่เดิมเปลี่ยนแปลง | รมว.วธ.รุดตรวจสอบโบราณสถานเมืองคอน |อาเล็ก' ยัน 'อาเล็ก' ยัน 'อาเล็ก' ไม่ซีเรียส 'อั้ม'|
+
+เหมือนเป๊ะ แสดงว่า train ไม่สำเร็จหรือ Greedy Algorithm ไม่ข่วย
+
 
 ## Discussion
