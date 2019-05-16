@@ -1,6 +1,9 @@
 # Headline Generator
 
-generate "headline" (ประมาณ 20-40 คำ) จาก description ของข่าว โดยใช้ seq2seq
+generate "headline" จาก description ของข่าว โดยใช้ seq2seq
+
+https://colab.research.google.com/drive/1clABG38xBRoYwcy6UHBztVuB8ztDEY9f
+https://colab.research.google.com/drive/1UvPUA4_BJV0UPtocC0AJvUiN3fg-xL3L
 
 ## Introduction
 seq2seq เป็นวิธีหนึ่งที่เปลี่ยน time series data เป็น time series data อีกอย่างหนึ่ง
@@ -22,7 +25,7 @@ seq2seq เป็นวิธีหนึ่งที่เปลี่ยน ti
 - headine: 72.7MB
 - description: 237.9MB
 
-โมเดลที่จะใช้ : single layer LSTM, multi layer BiLSTM, Attension
+โมเดลที่จะใช้ : single layer LSTM, multi layer BiLSTM with attention
 
 ### Model 1: single layer LSTM
 model for training
