@@ -40,6 +40,9 @@ model for training
 model for generating
 ![mono1](https://user-images.githubusercontent.com/44984892/57869139-9713d980-782e-11e9-91e7-1e8b4ca6fc8b.png)
 
+### Model 2: Multi Layer BiLSTM with Attention
+![attention](https://user-images.githubusercontent.com/44984892/57901533-cdce0c00-788f-11e9-92f3-5883d28629aa.png)
+
 ## Result
 ### Model 1: Single Layer LSTM with Greedy Algorithm
 
