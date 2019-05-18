@@ -16,10 +16,12 @@ seq2seq เป็นวิธีหนึ่งที่เปลี่ยน ti
 
 โครงการนี้เป็น Text Summarization ชนิดหนึ่ง
 
-## Method
-ข้อมูล : ข่าวไทยรัฐ 8 ปีที่ผ่านมา ทั้งหมด 448299 บทความ ข่าวที่ scrape มามีสามส่วน: headline(~ 50คำ), description(~ 250คำ) และ เนื้อหา
+แต่ headline ของข่าวลักษณะต่างกันกับ Text Summarization อย่างอื่น เพราะใช้คำศัพท์ที่น่าดึงดูดเยอะ ถ้าใช้ data นื้ อาจจะได้ผลที่น่าสนใจ
 
-ทีนี้ ใช้แค่ headline และ description เท่านั้น
+## Method
+ข้อมูล : ข่าวไทยรัฐ 8 ปีที่ผ่านมา ทั้งหมด 448299 บทความ ข่าวที่ scrape มามีสามส่วน: headline(~50คำ), description(~250คำ) และ เนื้อหา
+
+ทีนี้ ใช้แค่ headline และ description เท่านั้น ทิ้งเนื้อกาหมด
 
 ขนาดไฟล์
 - headine: 69MB
@@ -27,7 +29,10 @@ seq2seq เป็นวิธีหนึ่งที่เปลี่ยน ti
 
 โมเดลที่จะใช้ : single layer LSTM, multi layer BiLSTM with attention
 
-total vocaburary : 57908 คำ (เอาแค่คำที่ปรากฏ 3 ครั้งขึ้นไปเท่านั้น)
+- ตอนที่ generate headline ใช้ state ของ encoder และ decoder ที่ฝึกไว้แล้ว และให้ <EOS> เป็น initital word เท้านั้น
+- ใช้ greedy algorithm และ beam search
+
+total vocaburary size : 57908 คำ (เอาแค่คำที่ปรากฏ 3 ครั้งขึ้นไปเท่านั้น)
 
 train ใช้เวลานานมากเกือบเป็นวัน Google Colab จะปิด runtime โดยอัตโนมัติหลัง 90 นาที เพราะฉะนั้น ใช้ auto refresh ทุก 60 นาที
 
@@ -53,5 +58,6 @@ model for generating
 
 เหมือนเป๊ะ แสดงว่า train ไม่สำเร็จหรือ Greedy Algorithm ไม่ข่วย
 
+### Model 1: Single Layer LSTM with Beam Search
 
 ## Discussion
